@@ -73,6 +73,7 @@
 // app.listen(4500);
 //END
 
+//----REMOVE EXTENSION FROM URL----
 //START
 // const express = require('express');
 // const path = require('path')
@@ -523,7 +524,7 @@ event.on('countApi', () => {
 
 app.get('/', (req, resp) => {
     resp.send('connected');
-    event.emit('countApi')
+    event.emit('countApi');
 })
 app.get('/search', (req, resp) => {
     resp.send('search api called');
@@ -531,6 +532,5 @@ app.get('/search', (req, resp) => {
 app.get('/update', (req, resp) => {
     resp.send('update api called');
 })
-
 app.listen(4500);
 //END
